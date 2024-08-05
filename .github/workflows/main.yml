@@ -43,7 +43,7 @@ jobs:
           ninja -C "build-android" install
           cd ..
           git clone --depth 1 https://github.com/Mateus2022/Mesa-VirGL.git
-          cd mesa
+          cd Mesa-VirGL
           cp ../android-* .
           envsubst <android-${{matrix.arch}} >build-crossfile
           meson setup "build-android" \
