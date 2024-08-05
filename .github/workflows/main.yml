@@ -42,7 +42,7 @@ jobs:
             -Detnaviv=disabled
           ninja -C "build-android" install
           cd ..
-          git clone --depth 1 https://gitlab.freedesktop.org/Mesa/mesa.git
+          git clone --depth 1 https://github.com/Mateus2022/Mesa-VirGL.git
           cd mesa
           cp ../android-* .
           envsubst <android-${{matrix.arch}} >build-crossfile
