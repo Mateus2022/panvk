@@ -54,7 +54,7 @@ jobs:
             -Dandroid-stub=true \
             -Dllvm=disabled \
             -Dxlib-lease=disabled 
-            -Dosmesa=false \
+            -Dosmesa=true \
             -Dvulkan-drivers=panfrost \
             -Dgallium-drivers= \
             -Dbuildtype=release 
