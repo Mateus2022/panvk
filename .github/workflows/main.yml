@@ -42,7 +42,7 @@ jobs:
             -Detnaviv=disabled
           ninja -C "build-android" install
           cd ..
-          git clone --depth 1 https://gitlab.freedesktop.org/panfrost/mesa.git -b panvk
+          git clone --depth 1 https://github.com/Mateus2022/unified-mesa-project.git
           cd mesa
           cp ../android-* .
           envsubst <android-${{matrix.arch}} >build-crossfile
@@ -56,7 +56,7 @@ jobs:
             -Dxlib-lease=disabled 
             -Dosmesa=false \
             -Dvulkan-drivers=panfrost \
-            -Dgallium-drivers=panfrost \
+            -Dgallium-drivers= \
             -Dbuildtype=release 
           ninja -C "build-android" install
       - name: Upload libraries
