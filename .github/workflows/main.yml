@@ -55,9 +55,12 @@ jobs:
             -Dllvm=disabled \
             -Dxlib-lease=disabled 
             -Dosmesa=true \
+            -Degl=disabled \
+            -Dopengl=true \
+            -Dglx=disabled \
             -Dvulkan-drivers=panfrost \
-            -Dgallium-drivers= \
-            -Dbuildtype=release 
+            -Dgallium-drivers=panfrost \
+            -Dbuildtype=release
           ninja -C "build-android" install
       - name: Upload libraries
         uses: actions/upload-artifact@v2
