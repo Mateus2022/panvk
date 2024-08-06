@@ -56,7 +56,7 @@ jobs:
             -Dxlib-lease=disabled 
             -Dosmesa=false \
             -Dvulkan-drivers=panfrost \
-            -Dgallium-drivers=panfrost \
+            -Dgallium-drivers= \
             -Dbuildtype=release 
           ninja -C "build-android" install
       - name: Upload libraries
